@@ -10,7 +10,7 @@ def create
 end
 
 def checked
-  post = Post.fid(params[:id])
+  post = Post.find(params[:id])
   if post.checked
     post.update(checked: false)
   else 
